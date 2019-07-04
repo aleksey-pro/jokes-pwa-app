@@ -1,0 +1,48 @@
+.wrapper {
+  composes: bordered from '../Common.module.css';
+  font-family: 'Pacifico', cursive;
+  padding: 0 2em;
+  text-align: center;
+  box-shadow: inset 10px 10px 133px -32px rgba(255, 255, 255, 1);
+  box-sizing: border-box;
+  height: 35vh;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+}
+
+.text {
+  color: white;
+  font-size: 1.3em;
+}
+
+@media all and (min-height: 600px) {
+  .text {
+    font-size: 2em;
+  }
+  .wrapper {
+    height: 40vh;
+  }
+}
+
+@media all and (min-height: 800px) {
+  .text {
+    font-size: 2.3em;
+  }
+}
+
+.votes {
+  position: absolute;
+  padding: 10px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ffffff6e;
+  display: flex;
+  justify-content: space-around;
+}
+
+.votes span {
+  font-size: 2em;
+  color: #fff;
+}

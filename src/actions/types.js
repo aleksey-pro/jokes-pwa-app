@@ -1,0 +1,8 @@
+export const FETCH_JOKE = 'FETCH_JOKE';
+export const FETCH_JOKE_BY_ID = 'FETCH_JOKE_BY_ID';
+export const FETCH_JOKES_SUCCESS = 'FETCH_JOKES_SUCCESS';
+
+export const REQUEST_ERRORED = 'REQUEST_ERRORED';
+
+export const UPVOTE_JOKE = 'UPVOTE_JOKE';
+export const DOWNVOTE_JOKE = 'DOWNVOTE_JOKE';

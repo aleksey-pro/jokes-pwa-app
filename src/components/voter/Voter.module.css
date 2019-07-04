@@ -1,0 +1,44 @@
+.wrapper {
+  display: flex;
+}
+
+.section {
+  flex-basis: 50%;
+  text-align: center;
+  composes: bordered from '../Common.module.css';
+  border-radius: 10%;
+  position: relative;
+  padding: 1em;
+  background: #ffffff6e;
+}
+
+.section:hover {
+  cursor: pointer;
+}
+
+.section_left {
+  composes: section;
+  color: red;
+}
+
+.section_right {
+  composes: section;
+  color: green;
+}
+
+.section + .section {
+  margin-left: 12px;
+}
+
+.icon path {
+  fill: #530ce1;
+}
+
+.error {
+  margin: 1em auto;
+  background: #6d3939;
+  color: #fff;
+  font-size: 1.2em;
+  padding: 0.2em 0;
+  text-align: center;
+}

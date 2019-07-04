@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+
+html,
+body {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: gray;
+}
+
+.bordered {
+  border: 1px solid #ffeb00;
+  border-radius: 10px;
+}

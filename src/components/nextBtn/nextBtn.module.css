@@ -1,0 +1,26 @@
+.wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.btn {
+  width: 80vw;
+  margin: 1em auto;
+  display: block;
+  color: #fff;
+  font-size: 3em;
+  position: relative;
+  padding: 0.5em;
+  background: #8e2de2;
+  background: linear-gradient(to right, #4a00e0, #cba5ec);
+  z-index: 1;
+  border: none;
+  border-radius: 36px;
+  cursor: pointer;
+}
+
+@media (any-pointer: coarse) {
+  .btn {
+    width: auto;
+  }
+}
