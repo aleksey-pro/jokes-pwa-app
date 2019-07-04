@@ -26,3 +26,5 @@ https://jokes-app-9e653.firebaseapp.com/
 
 1. yarn install
 2. yarn run start
+
+Deploy: npm run build && firebase deploy
