@@ -30,6 +30,12 @@
   margin-left: 12px;
 }
 
+@media all and (max-height: 375px) {
+  .section {
+    padding: 0;
+  }
+}
+
 .icon path {
   fill: #530ce1;
 }

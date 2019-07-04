@@ -3,29 +3,42 @@ import { connect } from 'react-redux';
 import { fetchJokes, fetchJokesById } from '../../actions';
 import styles from './nextBtn.module.css';
 
-// const getPreviousJoke = (ids, cb) => {
-//   // const newIds = ids.splice(-1);
-//   // const id = newIds[newIds.length - 2];
-//   const id = ids[ids.length - 2];
-//   cb(id);
-// };
+class NextBtn extends React.Component {
+  constructor() {
+    super();
+    this.counter = 1;
+  }
 
-const NextBtn = ({ fetchJokes, ids, fetchJokesById }) => {
-  return (
-    // <div className={styles.wrapper}>
-    <button className={styles.btn} onClick={() => fetchJokes()}>
-      Next joke
-    </button>
-    //   <button
-    //     className={styles.btn}
-    //     disabled={ids.length <= 1}
-    //     onClick={() => getPreviousJoke(ids, fetchJokesById)}
-    //   >
-    //     Prev joke
-    //   </button>
-    // </div>
-  );
-};
+  getPreviousJoke = (ids, fetchJokesById) => {
+    let id = ids[ids.length - this.counter];
+    id && fetchJokesById(id);
+    this.counter += 2;
+  };
+
+  render() {
+    const { fetchJokes, ids, fetchJokesById } = this.props;
+    return (
+      <div className={styles.wrapper}>
+        <button
+          className={styles.btn}
+          onClick={() => {
+            this.counter = 2;
+            fetchJokes();
+          }}
+        >
+          Next joke
+        </button>
+        <button
+          className={styles.btn}
+          disabled={ids.length <= 1}
+          onClick={() => this.getPreviousJoke(ids, fetchJokesById)}
+        >
+          Prev joke
+        </button>
+      </div>
+    );
+  }
+}
 
 const mapStateToProps = state => ({
   ids: state.jokes.ids,

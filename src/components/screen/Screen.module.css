@@ -31,6 +31,15 @@
   }
 }
 
+@media all and (max-height: 375px) {
+  .text {
+    font-size: 1em;
+  }
+  .wrapper {
+    height: 20vh;
+  }
+}
+
 .votes {
   position: absolute;
   padding: 10px;
