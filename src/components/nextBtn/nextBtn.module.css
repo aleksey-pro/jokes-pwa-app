@@ -16,7 +16,7 @@
   z-index: 1;
   border: none;
   border-radius: 36px;
-  cursor: pointer;
+  outline: none;
 }
 
 @media (any-pointer: coarse) {
